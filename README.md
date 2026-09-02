@@ -2,8 +2,7 @@
 
 *A NIFTY options execution system wired to a live brokerage account, engineered so that it does not place orders.*
 
-<!-- hero image: generate assets/hero.png (1280x640) from assets/IMAGE_PROMPTS.md, then this renders -->
-<p align="center"><img src="assets/hero.png" alt="A steel blast door, slightly ajar, in a dim corridor" width="820"></p>
+<p align="center"><img src="assets/hero.jpg" alt="A steel blast door, slightly ajar, in a dim corridor" width="820"></p>
 
 The order-placement call in this system has never executed against the broker. Not once. Eleven independent checks sit between the strategy and that call, every one of them defaults to no, and each refusal is written to an append-only log with the reason attached.
 
@@ -65,7 +64,7 @@ More in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 The gates are polled the way a launch team is polled. Each one answers, one no-go holds, and silence is not a yes: a gate that throws while deciding is recorded as a refusal.
 
-<p align="center"><img src="assets/gates.png" alt="A row of steel lock gates on a canal at dawn" width="820"></p>
+<p align="center"><img src="assets/gates.jpg" alt="A row of steel lock gates on a canal at dawn" width="820"></p>
 
 | Gate | Refuses when |
 |---|---|
@@ -119,7 +118,7 @@ More in [docs/DECISIONS.md](docs/DECISIONS.md).
 
 ## What the logs actually show
 
-<p align="center"><img src="assets/log.png" alt="A seismograph drum with a continuous ink trace" width="820"></p>
+<p align="center"><img src="assets/log.jpg" alt="A seismograph drum with a continuous ink trace" width="820"></p>
 
 Sessions ran against live market data in observe and paper modes, where fills are synthesised locally and no broker call is made. That distinction matters for reading the numbers above: the 349 intents are real decisions on real prices, and the fills recorded against them are simulated.
 
@@ -179,7 +178,7 @@ Run it: `python excerpts/event_log_projection.py`
 
 ## What it cannot do, and what has to be true before it trades
 
-<p align="center"><img src="assets/refuse.png" alt="An empty trading floor at night, one screen showing a flat line" width="820"></p>
+<p align="center"><img src="assets/refuse.jpg" alt="An empty trading floor at night, one screen showing a flat line" width="820"></p>
 
 The gates cannot protect against a fill the broker reports late, or against an exit order that does not fill because the strike has no liquidity. The control for both is a person watching, which is why the system has no unattended mode. It runs on one machine, with one operator, against vendors whose failures I can detect but not prevent. Two modules are past 1,500 lines and want splitting, and I have written that down rather than pretending otherwise.
 

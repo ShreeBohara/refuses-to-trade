@@ -12,7 +12,7 @@ The tone is quiet industrial seriousness, like a control room at 4 a.m.
 
 ---
 
-## 1. `assets/hero.png` — repo banner and social preview
+## 1. `assets/hero.jpg` — repo banner and social preview
 Size: 1280 × 640 (GitHub social preview ratio 2:1). Also upload this one under
 Settings → General → Social preview.
 
@@ -25,7 +25,7 @@ Prompt:
 Why: the system is a door that is closed by default and opens only when eleven
 conditions hold. The image should feel like restraint, not danger.
 
-## 2. `assets/gates.png` — section header for "Eleven gates"
+## 2. `assets/gates.jpg` — section header for "Eleven gates"
 Size: 1600 × 600.
 
 Prompt:
@@ -36,7 +36,7 @@ Prompt:
 
 Why: independent barriers in series, all closed by default.
 
-## 3. `assets/log.png` — section header for "The log is the database"
+## 3. `assets/log.jpg` — section header for "The log is the database"
 Size: 1600 × 600.
 
 Prompt:
@@ -46,7 +46,7 @@ Prompt:
 
 Why: an append-only record that is written once and read many ways.
 
-## 4. `assets/refuse.png` — closing image
+## 4. `assets/refuse.jpg` — closing image
 Size: 1600 × 600.
 
 Prompt:
